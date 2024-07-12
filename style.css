@@ -1,0 +1,285 @@
+@font-face {
+	    font-family: 'TT Lakes';
+	    src: url('./font/TTLakes-Regular.eot');
+	    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+	        url('./font/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+	        url('./font/TTLakes-Regular.woff') format('woff'),
+	        url('./font/TTLakes-Regular.ttf') format('truetype');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+	@font-face {
+	    font-family: 'TT Lakes Bold';
+	    src: url('./font/TTLakes-Bold.eot');
+	    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+	        url('./font/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+	        url('./font/TTLakes-Bold.woff') format('woff'),
+	        url('./font/TTLakes-Bold.ttf') format('truetype');
+	    font-weight: bold;
+	    font-style: normal;
+	}
+
+	.header--dw-768 {
+		display: none;
+	}
+
+	.main__text--dw-768 {
+		display: none;
+	}
+
+	.main__header--dw-1120 {
+		display: none;
+	}
+
+	.main__info--desktop {
+		display: none;
+	}
+
+	body {
+		font-family: 'TT Lakes';
+		margin: 0;
+		padding: 0;
+	}
+
+	.header--dw-320 {
+		display: flex;
+		justify-content: space-around;
+		align-items:center;
+		background-color: white;
+		padding: 10px 10px;
+	}
+
+	.header__burger {
+		margin-left: 6px;
+	}
+
+	.main {
+		background-color: #F8F8F8;
+		box-shadow: 0 -1px #D9FFF5;
+	}
+
+	.main__heading {
+		font-family: 'TT Lakes Bold';
+		font-size: 28px;
+		letter-spacing: -0.6px;
+		line-height: 40px;
+		display: flex;
+		gap: 16px;
+		padding-top: 24px;
+		margin-top: 0;
+	}
+
+	.main__heading::before {
+		content: url('./pages/highlight.svg');
+	}	
+
+	.main--shadow {
+		position: absolute;
+		right: 0;
+		height: 50px;
+		color: #F8F8F8;
+		box-shadow: -20px 0 10px #F8F8F8 inset;
+	}
+
+
+	.main__slideMenu {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		margin-left: 16px;
+		margin-bottom: 20px;
+		display: inline-flex;
+		gap: 10px;
+		font-size: 16px;
+		overflow: auto;
+	}
+
+	.main__item {
+		display: flex;
+		flex-grow: 1;
+		justify-content: flex-start;
+		align-items: center;
+		line-height: 24px;
+		height: 40px;
+		padding: 0 15px;
+		white-space: nowrap;
+	}
+
+	.main__item::marker {
+		content: '';
+	}
+
+
+	.main__item--active {
+		background-color: white;
+		border-radius: 6px;
+		border: 2px solid #B8FFEC;
+	}
+
+	.item {
+		color: #7E7E82;
+	}
+
+	.main__text {
+		margin: 0 16px;
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	.main__more {
+		display: flex;
+		font-size: 16px;
+		margin-left: 16px;
+	}
+
+	.more {
+		color: black;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+
+	.main__picture {
+		margin-bottom: 20px;
+	}
+
+
+
+
+@media (min-width: 768px) {
+
+	.header--dw-320 {
+		display: none;
+	}
+
+	.main__header--dw-1120 {
+		display: none;
+	}
+
+	.header--dw-768 {
+		height: 88px;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 0;
+	}
+
+	.header__leftSide {
+		display: flex;
+		justify-content: space-around;
+		align-items:center;
+		gap: 20px;
+		padding-left: 20px;
+	}
+	
+	.header__rightSide {
+		display: flex;
+		justify-content: space-around;
+		align-items:center;
+		gap: 20px;
+		padding-right: 20px;
+	}
+
+	.main__text--dw-768 {
+		display: block;
+	}
+
+	.main__info--mobile {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.info--union {
+		width: 335px;
+	}
+
+	.main__picture {
+		width: 360px;
+		height: 208px;
+		padding-right: 20px;
+		border-radius: 5px;
+	}
+
+}
+
+
+@media (min-width: 1120px) {
+
+	.header--dw-768 {
+		display: none;
+	}
+
+	.main__heading {
+		display: none;
+	}
+
+	.main__info--mobile {
+		display: none;
+	}
+
+	.main__info--desktop {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.main__header--dw-1120 {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 10px;
+	}
+
+	.main__heading--dw-1120 {
+		font-family: 'TT Lakes Bold';
+		font-size: 28px;
+		letter-spacing: -0.6px;
+		line-height: 40px;
+		display: flex;
+		gap: 16px;
+		padding-top: 24px;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.main__heading--dw-1120::before {
+		content: url('./pages/highlight.svg');
+	}
+
+	.main__icons {
+		display: flex;
+		justify-content: space-around;
+		align-items:center;
+		gap: 20px;
+		padding-right: 20px;
+	}
+
+	label {
+		display: flex;
+		align-items:center;
+		gap: 10px;
+	}
+	
+	.main__nav {
+		margin: 0;
+		margin-left: 5px;
+		width: 1063px;
+	}
+
+	.main__slideMenu {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0;
+		width: 1063px;
+	}
+
+	.main__text {
+		width: 490px;
+		line-height: 20px;
+	}
+
+	.main__picture {
+		width: 531.35px;
+		height: 307px;
+	}
+}
