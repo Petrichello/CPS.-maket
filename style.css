@@ -116,13 +116,15 @@
 		content: url('./images/highlight.svg');
 	}	
 
+/* Shadow */
 	.main__nav::before {
 		position: absolute;
 		right: 0;
 		height: 40px;
-		color: #F8F8F8;
-		content: '___';
-		box-shadow: -20px 0 10px #F8F8F8 inset;
+		width: 20px;
+		content: '';
+		z-index: 1;
+		box-shadow: -10px 0 5px 0 #F8F8F8 inset;
 	}
 
 
