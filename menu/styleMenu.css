@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../font/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('../font/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/TTLakes-Regular.woff') format('woff'),
+        url('../font/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url('../font/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+        url('../font/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/TTLakes-Bold.woff') format('woff'),
+        url('../font/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'TT Lakes';
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #1B1C21;
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    height: 1024px;
+    box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+
+    background-color: white;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+    padding: 0 24px;
+}
+
+.header__leftSide {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__x {
+    background-image: url('../images/x.svg');
+    width: 40px;
+    height: 40px;
+    transition-duration: 0.4s;
+}
+
+.header__x:hover {
+    scale: 1.2;
+}
+
+.header__logo {
+    background-image: url('../images/group.svg');
+    width: 98px;
+    height: 52px;
+}
+
+.header__rightSide {
+    display: flex;
+    gap: 16px;
+}
+
+.header__search {
+    background-image: url('../images/search.svg');
+    width: 40px;
+    height: 40px;
+    transition-duration: 0.4s;
+}
+
+.header__search:hover {
+    scale: 1.2;
+}
+
+.main {
+    padding-top: 28px;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 32px;
+}
+
+.menu__link {
+    flex-grow: 1;
+    height: 100%;
+    text-decoration: none;
+    color: #1B1C21;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    padding-left: 24px;
+    padding-top: 5px;
+    transition-duration: 0.3s;
+}
+
+.menu__link:hover {
+    color: rgb(40, 175, 153);
+    padding-left: 30px;
+}
+
+.menu__link--active {
+    color: #7E7E82;
+}
+
+.menu__item--active::before {
+    content: url('../images/highlightM.svg');
+}
+
+.footer {
+    padding-top: 268px;
+    padding-left: 24px;
+}
+
+.icons {
+    display: flex;
+    gap: 16px;
+    height: 40px;
+}
+
+.icons__call {
+    background-image: url('../images/call.svg');
+    width: 40px;
+    height: 40px;
+    transition-duration: 0.4s;
+}
+
+.icons__call:hover {
+    scale: 1.2;
+}
+
+.icons__chat {
+    background-image: url('../images/chat.svg');
+    width: 40px;
+    height: 40px;
+    transition-duration: 0.4s;
+}
+
+.icons__chat:hover {
+    scale: 1.2;
+}
+
+.icons__profile {
+    background-image: url('../images/profile.svg');
+    width: 40px;
+    height: 40px;
+    transition-duration: 0.4s;
+}
+
+.icons__profile:hover {
+    scale: 1.2;
+}
+
+.contacts__email {
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(27, 28, 33, 1);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-top: 16px;
+    transition-duration: 0.2s;
+}
+
+.contacts__email:hover {
+    color:rgba(255, 62, 121, 1);
+}
+
+.contacts__tel {
+    display: inline-block;
+    font-family: 'TT Lakes Bold';
+    text-decoration: none;
+    color: rgba(27, 28, 33, 1);
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    margin-top: 12px;
+    transition-duration: 0.2s;
+}
+
+.contacts__tel:hover {
+    color:rgba(255, 62, 121, 1);
+}
+
+.language {
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+    list-style: none;
+    display: flex;
+    gap: 7px;
+}
+
+.language__link {
+    text-decoration: none;
+    color:rgba(27, 28, 33, 1);
+    transition-duration: 0.3s;
+}
+
+.language__link:not(.language--active):hover {
+    color:rgba(255, 62, 121, 1);
+}
+
+.language--active {
+    color: rgba(126, 126, 130, 1);
+}
