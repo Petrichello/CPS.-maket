@@ -124,7 +124,7 @@
 		width: 20px;
 		content: '';
 		z-index: 1;
-		box-shadow: -10px 0 5px 0 #F8F8F8 inset;
+		box-shadow: -10px 0 10px 0 #F8F8F8 inset;
 	}
 
 
