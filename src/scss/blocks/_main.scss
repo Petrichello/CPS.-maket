@@ -18,7 +18,7 @@
             margin-bottom: 0;
 
             &::before {
-                content: url('../img/highlight.svg');
+                content: url('./img/highlight.svg');
             }
 
             @media (min-width: 1366px) {
@@ -27,9 +27,7 @@
         }
 
         .heading__buttons {
-            @media (max-width: 1365px) {
-                display: none;
-            }
+            
 
             display: flex;
             justify-content: space-around;
@@ -38,17 +36,21 @@
             padding-right: 36px;
             padding-top: 42px;
 
+            @media (max-width: 1365px) {
+                display: none;
+            }
+
             .buttons {
                 display: flex;
                 align-items:center;
                 gap: 10px;
 
                 &__repair::after {
-                    content: url('../img/repair.svg');
+                    content: url('./img/repair.svg');
                 }
 
                 &__checkstatus::after {
-                    content: url('../img/checkstatus.svg');
+                    content: url('./img/checkstatus.svg');
                 }
             }
         }

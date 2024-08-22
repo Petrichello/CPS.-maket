@@ -1,3 +1,6 @@
+const buttonMore = document.querySelector('.info__more');
+const paragraph = document.querySelectorAll('.info__paragraph--hidden');
+
 buttonMore.addEventListener('click', function () {
 
     if (buttonMore.textContent === 'Читать далее') {

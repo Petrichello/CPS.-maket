@@ -1,92 +1,127 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserWebpackPlugin = require("terser-webpack-plugin");
 
-module.exports = {
-  // Входной файл
-  entry: [
-    './src/js/index.js'
-  ],
-
-  // Выходной файл
-  output: {
-    filename: './js/bundle.js'
-  },
-
-  // Source maps для удобства отладки
-  devtool: "source-map",
-
-  module: {
-    rules: [
-      // Транспилируем js с babel
-      {
-        test: /\.js$/,
-        include: path.resolve(__dirname, 'src/js'),
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          }
-        }
-      },
-
-      // Компилируем SCSS в CSS
-      {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader, // Extract css to separate file
-          'css-loader', // translates CSS into CommonJS
-          'postcss-loader', // parse CSS and add vendor prefixes to CSS rules
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
-        ],
-      },
-
-      // Подключаем шрифты из css
-      {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: 'file-loader?name=./fonts/[name].[ext]'
-          },
-        ]
-      },
-
-      // Подключаем картинки из css
-      {
-        test: /\.(svg|png|jpg|jpeg|webp)$/,
-        use: [
-          {
-            loader: 'file-loader?name=./static/[name].[ext]'
-          },
-        ]
-      },
-    ],
-  },
-  plugins: [
-    // Подключаем файл html, стили и скрипты встроятся автоматически
-    new HtmlWebpackPlugin({
-      title: 'Webpack 4 Starter',
-      template: './src/index.html',
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: false,
-      }
-    }),
-
-    // Кладем стили в отдельный файлик
-    new MiniCssExtractPlugin({
-      filename: 'style.css',
-    }),
-
-    // Копируем картинки
-    new CopyWebpackPlugin([
-      {
-        from: './src/img',
-        to: 'img',
-      },
-    ])
-  ],
+const optimization = () => {
+    const config = {
+        splitChunks: {
+            chunks: "all",
+        },
+        minimizer: [],
+    }
+    if (isProd) {
+        const plugins = [
+            new CssMinimizerPlugin(),
+            new TerserWebpackPlugin(),
+        ];
+        config.minimizer.push(...plugins)
+    }
+    return config;
 };
+const filename = ext => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+const cssLoaders = extra => {
+    const loaders = [MiniCssExtractPlugin.loader, 'css-loader'];
+    if (extra) loaders.push(extra);
+    return loaders;
+}
+
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = !isDev;
+console.log(`IS DEV: ${isDev}`);
+module.exports = {
+    context: path.resolve(__dirname, 'src'),
+    mode: 'development',
+    entry: {
+        main: './js/index.js',
+    },
+    output: {
+        filename: filename('js'),
+        path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: 'img/[name][ext][query]',
+        clean: true
+    },
+    resolve: {
+        extensions: ['.js', '.json', '.css', '.scss'],
+        alias: {
+            "@": path.resolve(__dirname, 'src'),
+            "@style": path.resolve(__dirname, 'src/styles/sass'),
+        },
+    },
+    optimization: optimization(),
+    plugins: [
+        new HTMLWebpackPlugin({
+            title: 'Webpack 5 Starter',
+            template: './index.html',
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: false,
+            }
+        }),
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin(
+            {
+                filename: filename('css')
+            }
+        ),
+        new CssMinimizerPlugin(),
+    ],
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'src'),
+        },
+        compress: true,
+        port: 4200,
+        open: true,
+        hot: isDev,
+    },
+    devtool: isDev ? 'source-map' : undefined,
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: '/node_modules/',
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            '@babel/preset-env',
+                        ],
+                    },
+                },
+            },
+            {
+                test: /\.tsx?$/,
+                exclude: '/node_modules/',
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            '@babel/preset-env',
+                            "@babel/preset-typescript",
+                        ],
+                    },
+                },
+            },
+            {
+                test: /\.css$/,
+                use: cssLoaders(),
+            },
+            {
+                test: /\.s[ac]ss$/,
+                use: cssLoaders('sass-loader'),
+            },
+            {
+                test: /\.(png|jpeg|jpg|svg|gif)$/,
+                type: 'asset/resource',
+            },
+            {
+                test: /\.html/,
+                use: ['html-loader'],
+            }
+        ],
+    },
+}

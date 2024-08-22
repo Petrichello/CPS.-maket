@@ -339,7 +339,7 @@ a {
   gap: 16px;
 }
 .header__leftSide::after {
-  content: url("../img/divider.svg");
+  content: url("./img/divider.svg");
   height: 32px;
 }
 @media (min-width: 768px) {
@@ -349,12 +349,12 @@ a {
 }
 @media (min-width: 768px) {
   .header__leftSide::before {
-    content: url("../img/divider.svg");
+    content: url("./img/divider.svg");
     height: 32px;
   }
 }
 .header__burger {
-  background-image: url("../img/burger.svg");
+  background-image: url("./img/burger.svg");
   width: 40px;
   height: 40px;
   order: -1;
@@ -365,22 +365,22 @@ a {
 }
 @media (min-width: 768px) {
   .header__rightSide::before {
-    content: url("../img/divider.svg");
+    content: url("./img/divider.svg");
     height: 32px;
   }
 }
 .header__repair {
-  background-image: url("../img/repair.svg");
+  background-image: url("./img/repair.svg");
   width: 40px;
   height: 40px;
 }
 .header__checkstatus {
-  background-image: url("../img/checkstatus.svg");
+  background-image: url("./img/checkstatus.svg");
   width: 40px;
   height: 40px;
 }
 .header__call {
-  background-image: url("../img/call.svg");
+  background-image: url("./img/call.svg");
   width: 40px;
   height: 40px;
   order: -1;
@@ -391,7 +391,7 @@ a {
   }
 }
 .header__chat {
-  background-image: url("../img/chat.svg");
+  background-image: url("./img/chat.svg");
   width: 40px;
   height: 40px;
   order: -1;
@@ -402,7 +402,7 @@ a {
   }
 }
 .header__profile {
-  background-image: url("../img/profile.svg");
+  background-image: url("./img/profile.svg");
   width: 40px;
   height: 40px;
   order: -1;
@@ -433,7 +433,7 @@ a {
   margin-bottom: 0;
 }
 .main__heading .heading__text::before {
-  content: url("../img/highlight.svg");
+  content: url("./img/highlight.svg");
 }
 @media (min-width: 1366px) {
   .main__heading .heading__text {
@@ -459,10 +459,10 @@ a {
   gap: 10px;
 }
 .main__heading .heading__buttons .buttons__repair::after {
-  content: url("../img/repair.svg");
+  content: url("./img/repair.svg");
 }
 .main__heading .heading__buttons .buttons__checkstatus::after {
-  content: url("../img/checkstatus.svg");
+  content: url("./img/checkstatus.svg");
 }
 .main__nav {
   margin-top: 16px;
@@ -587,7 +587,7 @@ a {
   }
 }
 .menu__button--cross {
-  background-image: url("../img/x.svg");
+  background-image: url("./img/x.svg");
   width: 40px;
   height: 40px;
 }
@@ -597,7 +597,7 @@ a {
   }
 }
 .menu__search {
-  background-image: url("../img/search.svg");
+  background-image: url("./img/search.svg");
   width: 40px;
   height: 40px;
 }
@@ -619,7 +619,7 @@ a {
   height: 32px;
 }
 .menu__main .list__item--active::before {
-  content: url("../img/highlightM.svg");
+  content: url("./img/highlightM.svg");
 }
 .menu__main .list__link {
   flex-grow: 1;
@@ -647,17 +647,17 @@ a {
   height: 40px;
 }
 .menu__footer .icons__call {
-  background-image: url("../img/call.svg");
+  background-image: url("./img/call.svg");
   width: 40px;
   height: 40px;
 }
 .menu__footer .icons__chat {
-  background-image: url("../img/chat.svg");
+  background-image: url("./img/chat.svg");
   width: 40px;
   height: 40px;
 }
 .menu__footer .icons__profile {
-  background-image: url("../img/profile.svg");
+  background-image: url("./img/profile.svg");
   width: 40px;
   height: 40px;
 }
@@ -765,7 +765,7 @@ a {
     display: none !important;
   }
 }
-@media (min-width: 1032px) {
+@media (min-width: 1010px) {
   .brends__item {
     width: 240px !important;
   }
@@ -790,7 +790,7 @@ a {
   display: inline;
 }
 .brends__arrow {
-  background-image: url("../img/arrow.svg");
+  background-image: url("./img/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 40px;
@@ -803,6 +803,7 @@ a {
 }
 @media (min-width: 768px) {
   .brends__more {
+    font-family: "TT Lakes Medium";
     display: block;
     padding: 0;
     padding-left: 24px;
@@ -818,7 +819,7 @@ a {
     color: var(--color-dark);
   }
   .brends__more::before {
-    content: url("../img/expand.svg");
+    content: url("./img/expand.svg");
     vertical-align: middle;
     margin-right: 5px;
   }
@@ -858,7 +859,7 @@ a {
     display: none !important;
   }
 }
-@media (min-width: 1120px) {
+@media (min-width: 1060px) {
   .equipments__item {
     width: 240px !important;
   }
@@ -902,7 +903,7 @@ a {
   right: 0;
   bottom: 0;
   margin: 16px;
-  background-image: url("../img/arrow.svg");
+  background-image: url("./img/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 40px;
@@ -915,6 +916,7 @@ a {
 }
 @media (min-width: 768px) {
   .equipments__more {
+    font-family: "TT Lakes Medium";
     display: block;
     padding: 0;
     padding-left: 24px;
@@ -930,7 +932,7 @@ a {
     color: var(--color-dark);
   }
   .equipments__more::before {
-    content: url("../img/expand.svg");
+    content: url("./img/expand.svg");
     vertical-align: middle;
     margin-right: 5px;
   }
@@ -1033,7 +1035,7 @@ a {
   border-radius: 16px;
 }
 .prices__button::after {
-  content: url("../img/arrowWhite.svg");
+  content: url("./img/arrowWhite.svg");
 }
 .prices__info {
   font-size: 14px;
@@ -1060,7 +1062,7 @@ a {
 }
 .prices__getOffer::after {
   display: inline-block;
-  content: url("../img/arrow.svg");
+  content: url("./img/arrow.svg");
   vertical-align: middle;
   padding-left: 7px;
 }
@@ -1149,7 +1151,7 @@ a {
   margin-right: 16px;
 }
 .table__button::after {
-  content: url("../images/arrowWhite.svg");
+  content: url("./img/arrowWhite.svg");
 }
 .table__tr::after {
   content: "";
@@ -1231,7 +1233,7 @@ a {
   min-height: 2000px;
 }
 .feedback__button--cross {
-  background-image: url("../img/x.svg");
+  background-image: url("./img/x.svg");
   width: 40px;
   height: 40px;
   margin-left: 16px;
@@ -1255,7 +1257,7 @@ a {
   margin-bottom: 0;
 }
 .feedback__heading::before {
-  content: url("../img/highlight.svg");
+  content: url("./img/highlight.svg");
 }
 .feedback .form {
   padding-inline: 16px;
@@ -1323,7 +1325,7 @@ a {
   margin-right: 16px;
 }
 .feedback .form__button::after {
-  content: url("../img/arrowWhite.svg");
+  content: url("./img/arrowWhite.svg");
 }
 
 .call {
@@ -1347,7 +1349,7 @@ a {
   min-height: 2000px;
 }
 .call__button--cross {
-  background-image: url("../img/x.svg");
+  background-image: url("./img/x.svg");
   width: 40px;
   height: 40px;
   margin-left: 16px;
@@ -1371,7 +1373,7 @@ a {
   margin-bottom: 0;
 }
 .call__heading::before {
-  content: url("../img/highlight.svg");
+  content: url("./img/highlight.svg");
 }
 .call .form {
   padding-inline: 16px;
@@ -1424,7 +1426,7 @@ a {
   margin-right: 16px;
 }
 .call .form__button::after {
-  content: url("../img/arrowWhite.svg");
+  content: url("./img/arrowWhite.svg");
 }
 
 .info__text {
@@ -1469,12 +1471,12 @@ a {
   margin-top: 10px;
 }
 .info__more::before {
-  content: url("../img/expand.svg");
+  content: url("./img/expand.svg");
   vertical-align: middle;
   margin-right: 5px;
 }
 .info__picture {
-  background-image: url("../img/copy-320.jpg");
+  background-image: url("./img/copy-320.jpg");
   background-repeat: no-repeat;
   width: 320px;
   height: 176px;
@@ -1483,14 +1485,14 @@ a {
 }
 @media (min-width: 768px) {
   .info__picture {
-    background-image: url("../img/copy-768.jpg");
+    background-image: url("./img/copy-768.jpg");
     width: 360px;
     height: 208px;
   }
 }
 @media (min-width: 1120px) {
   .info__picture {
-    background-image: url("../img/copy-1120.jpg");
+    background-image: url("./img/copy-1120.jpg");
     width: 531px;
     height: 307px;
   }

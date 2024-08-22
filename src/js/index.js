@@ -1,4 +1,3 @@
-import './blocks/variables';
 import './blocks/brends';
 import './blocks/call';
 import './blocks/equipments';

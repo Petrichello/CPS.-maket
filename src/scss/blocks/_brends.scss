@@ -54,7 +54,7 @@
             }
         }
 
-        @media (min-width: 1032px) {
+        @media (min-width: 1010px) {
             width: 240px !important;
             
             &:nth-child(7), &:nth-child(8) {
@@ -85,7 +85,7 @@
     }
 
     &__arrow {
-        background-image: url('../img/arrow.svg');
+        background-image: url('./img/arrow.svg');
         background-repeat: no-repeat;
         background-position: center;
         width: 40px;
@@ -98,6 +98,7 @@
         display: none;
 
         @media (min-width: 768px) {
+            font-family: 'TT Lakes Medium';
             display: block;
             padding: 0;
             padding-left: 24px;
@@ -114,7 +115,7 @@
             color: var(--color-dark);
 
             &::before {
-                content: url('../img/expand.svg');
+                content: url('./img/expand.svg');
                 vertical-align: middle;
                 margin-right: 5px;
             }

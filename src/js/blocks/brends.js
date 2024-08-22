@@ -1,3 +1,6 @@
+const brendsButton = document.querySelector('.brends__more');
+const brendsItemHidden = document.querySelectorAll('.brends__item--hidden');
+
 brendsButton.addEventListener('click', function () {
 
     if (brendsButton.textContent === 'Показать все') {

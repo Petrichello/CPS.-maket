@@ -1,3 +1,9 @@
+const callButton = document.querySelector('.header__call');
+const callButton2 = document.querySelector('.icons__call');
+const call = document.querySelector('.call');
+const callButtonCross = document.querySelector('.call__button--cross');
+const blurLeft = document.querySelector('.blur__left');
+
 callButton.addEventListener('click', function () {
     call.classList.remove('hidden');
     blurLeft.classList.remove('hidden');

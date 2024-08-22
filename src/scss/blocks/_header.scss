@@ -1,7 +1,5 @@
 .header {
-	@media (min-width: 1366px) {
-		display: none;
-	}
+	
 
 	display: flex;
 	justify-content: space-between;
@@ -10,13 +8,17 @@
 	height: 88px;
 	padding: 0 16px;
 
+	@media (min-width: 1366px) {
+		display: none;
+	}
+
 	&__leftSide {
 		display: flex;
 		align-items: center;
 		gap: 16px;
 
 		&::after {
-			content: url('../img/divider.svg');
+			content: url('./img/divider.svg');
 			height: 32px;
 
 			@media (min-width: 768px) {
@@ -26,14 +28,14 @@
 
 		@media (min-width: 768px) {
 			&::before {
-				content:url('../img/divider.svg');
+				content:url('./img/divider.svg');
 				height: 32px;
 			}
 		}
 	}
 
 	&__burger {
-		background-image: url('../img/burger.svg');
+		background-image: url('./img/burger.svg');
 		width: 40px;
 		height: 40px;
 		order: -1;
@@ -45,26 +47,26 @@
 
 		@media (min-width: 768px) {
 			&::before {
-				content:url('../img/divider.svg');
+				content:url('./img/divider.svg');
 				height: 32px;
 			}
 		}
 	}
 
 	&__repair {
-		background-image: url('../img/repair.svg');
+		background-image: url('./img/repair.svg');
 		width: 40px;
 		height: 40px;
 	}
 
 	&__checkstatus {
-		background-image: url('../img/checkstatus.svg');
+		background-image: url('./img/checkstatus.svg');
 		width: 40px;
 		height: 40px;
 	}
 
 	&__call {
-		background-image: url('../img/call.svg');
+		background-image: url('./img/call.svg');
 		width: 40px;
 		height: 40px;
 		order: -1;
@@ -75,7 +77,7 @@
 	}
 
 	&__chat {
-		background-image: url('../img/chat.svg');
+		background-image: url('./img/chat.svg');
 		width: 40px;
 		height: 40px;
 		order: -1;
@@ -86,7 +88,7 @@
 	}
 
 	&__profile {
-		background-image: url('../img/profile.svg');
+		background-image: url('./img/profile.svg');
 		width: 40px;
 		height: 40px;
 		order: -1;

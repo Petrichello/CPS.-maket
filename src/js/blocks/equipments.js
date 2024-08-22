@@ -1,3 +1,6 @@
+const equipmentsButton = document.querySelector('.equipments__more');
+const equipmentsItemHidden = document.querySelectorAll('.equipments__item--hidden');
+
 equipmentsButton.addEventListener('click', function () {
 
     if (equipmentsButton.textContent === 'Показать все') {

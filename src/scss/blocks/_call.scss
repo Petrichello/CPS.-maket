@@ -23,7 +23,7 @@
     }
 
     &__button--cross {
-        background-image: url('../img/x.svg');
+        background-image: url('./img/x.svg');
         width: 40px;
         height: 40px;
         margin-left: 16px;
@@ -47,7 +47,7 @@
         margin-bottom: 0;
 
         &::before {
-            content: url('../img/highlight.svg');
+            content: url('./img/highlight.svg');
         }
     }
 
@@ -105,7 +105,7 @@
             margin-right: 16px;
     
             &::after {
-                content: url("../img/arrowWhite.svg");
+                content: url("./img/arrowWhite.svg");
             }
         }
     }

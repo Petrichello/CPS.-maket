@@ -44,7 +44,7 @@
     }
 
     &__button--cross {
-        background-image: url('../img/x.svg');
+        background-image: url('./img/x.svg');
         width: 40px;
         height: 40px;
 
@@ -54,7 +54,7 @@
     }
 
     &__search {
-        background-image: url('../img/search.svg');
+        background-image: url('./img/search.svg');
         width: 40px;
         height: 40px;
     }
@@ -77,7 +77,7 @@
                 height: 32px;
 
                 &--active::before {
-                    content: url('../img/highlightM.svg');
+                    content: url('./img/highlightM.svg');
                 }
             }
 
@@ -112,19 +112,19 @@
             height: 40px;
 
             &__call {
-                background-image: url('../img/call.svg');
+                background-image: url('./img/call.svg');
                 width: 40px;
                 height: 40px;
             }
 
             &__chat {
-                background-image: url('../img/chat.svg');
+                background-image: url('./img/chat.svg');
                 width: 40px;
                 height: 40px;
             }
 
             &__profile {
-                background-image: url('../img/profile.svg');
+                background-image: url('./img/profile.svg');
                 width: 40px;
                 height: 40px;
             }
