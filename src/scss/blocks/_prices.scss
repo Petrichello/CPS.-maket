@@ -1,0 +1,188 @@
+.prices {
+ 
+    &__table {
+        display: none;
+    }
+
+    &__heading {
+        padding: 16px;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        color: var(--color-gray-alt);
+        background-image: linear-gradient(to right, var(--color-gray), var(--color-light));
+        box-shadow: 0 1px var(--color-accent-shadow) inset;
+
+        @media (min-width: 768px) {
+            padding-left: 24px;
+        }
+    }
+
+    &__swiper::before {
+        @media (max-width: 767px) {
+
+            position: absolute;
+            right: 0;
+            height: 200px;
+            width: 20px;
+            content: '';
+            z-index: 100;
+            box-shadow: -10px 0 10px 0 var(--color-gray) inset;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: block;
+        flex: none;
+        width: 75vw !important;
+        height: 200px !important;
+        box-sizing: border-box;
+        border: 1px solid var(--color-gray-border);
+        border-radius: 6px;
+        background-color: var(--color-light);
+    }
+
+    &__link {
+        display: grid;
+        grid-template-areas:   "services services"
+                                "price ."
+                                "time button";
+        grid-template-columns: 1fr 1fr;
+        row-gap: 16px;
+    
+        font-size: 14px;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 16px;
+        text-decoration: none;
+        color: var(--color-dark);
+    }
+
+    .theading {
+        margin: 0;
+        margin-bottom: 4px;
+    
+        color: var(--color-gray-alt);
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        opacity: 72.18%;
+    }
+    
+    .tr {
+        margin: 0;
+        line-height: 18px;
+    }
+    
+    .services {
+        grid-area: services;
+    }
+    
+    .price {
+        grid-area: price;
+    }
+    
+    .time {
+        grid-area: time;
+    }
+
+    &__button {
+        display: flex;
+        gap: 17px;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        grid-area: button;
+        background-color: var(--color-pink);
+    
+        font-size: 12px;
+        text-align: center;
+        line-height: 24px;
+        letter-spacing: -0.15px;
+        text-transform: uppercase;
+        color: var(--color-light);
+    
+        width: 119px;
+        height: 32px;
+        padding-inline: 12px;
+        box-sizing: border-box;
+        border-radius: 16px;
+
+        &::after {
+            content: url("../img/arrowWhite.svg");
+        }
+    }
+
+    &__info {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        padding-left: 16px;
+    }
+
+    &__getOffer {
+        font-family: 'TT Lakes Medium';
+        font-weight: 600;
+        display: inline-block;
+        padding: 0;
+        padding-left: 16px;
+        margin-top: 16px;
+        width: 230px;
+        border: none;
+        background-color: transparent;
+        text-decoration: none;
+        cursor: pointer;
+
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: var(--color-dark);
+
+        &::after {
+            display: inline-block;
+            content: url("../img/arrow.svg");
+            vertical-align: middle;
+            padding-left: 7px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        &__swiper {
+            display: none !important;
+        }
+
+        &__table {
+            display: block;
+            width: 98vw;
+            border-spacing: 0;
+    
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.2px;
+
+            margin-top: 31px;
+        }
+
+        &__info {
+            width: 450px;
+            height: 60px;
+            padding-left: 24px;
+            margin-top: 24px;
+        }
+
+        &__getOffer {
+            width: 400px;
+            padding-left: 24px;
+            margin-top: 16px;
+
+            &:hover {
+                transition-duration: 0.2s;
+                color: var(--color-pink);
+            }
+        }
+    }
+}

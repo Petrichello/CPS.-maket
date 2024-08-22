@@ -1,0 +1,193 @@
+.menu {
+    font-family: 'TT Lakes';
+    font-weight: 700;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    color: var(--color-dark);
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    min-height: 2000px;
+    box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+
+    border: none;
+
+    background-color: var(--color-light);
+
+    &:modal {
+        max-width: 320px;
+        min-height: 2000px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 88px;
+        padding: 0 16px;
+
+        @media (min-width: 1366px) {
+            padding: 0 24px;
+        }
+    }
+
+    &__leftSide {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @media (min-width: 1366px) {
+            display: block;
+        }
+    }
+
+    &__button--cross {
+        background-image: url('../img/x.svg');
+        width: 40px;
+        height: 40px;
+
+        @media (min-width: 1366px) {
+            display: none;
+        }
+    }
+
+    &__search {
+        background-image: url('../img/search.svg');
+        width: 40px;
+        height: 40px;
+    }
+
+    &__main {
+        padding-top: 28px;
+
+        .list {
+            display: flex;
+            gap: 24px;
+            flex-direction: column;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            &__item {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 32px;
+
+                &--active::before {
+                    content: url('../img/highlightM.svg');
+                }
+            }
+
+            &__link {
+                flex-grow: 1;
+                height: 100%;
+                color: #1B1C21;
+                letter-spacing: -0.2px;
+                font-size: 16px;
+                padding-left: 24px;
+                padding-top: 5px;
+
+                &--active {
+                    color: var(--color-gray-alt);
+                }
+
+                &:hover {
+                    color: rgb(40, 175, 153);
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+
+    &__footer {
+        padding-top: 268px;
+        padding-left: 24px;
+
+        .icons {
+            display: flex;
+            gap: 16px;
+            height: 40px;
+
+            &__call {
+                background-image: url('../img/call.svg');
+                width: 40px;
+                height: 40px;
+            }
+
+            &__chat {
+                background-image: url('../img/chat.svg');
+                width: 40px;
+                height: 40px;
+            }
+
+            &__profile {
+                background-image: url('../img/profile.svg');
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .contacts__email {
+            display: inline-block;
+            text-decoration: none;
+            color: rgba(27, 28, 33, 1);
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            margin-top: 16px;
+            transition-duration: 0.2s;
+
+            &:hover {
+                color: var(--color-pink);
+            }
+        }
+
+        .contacts__tel {
+            display: inline-block;
+            font-family: 'TT Lakes Bold';
+            text-decoration: none;
+            color: rgba(27, 28, 33, 1);
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: -0.6px;
+            margin-top: 12px;
+            transition-duration: 0.2s;
+
+            &:hover {
+                color: var(--color-pink);
+            }
+        }
+
+        .language {
+            margin: 0;
+            padding: 0;
+            padding-top: 40px;
+            list-style: none;
+            display: flex;
+            gap: 7px;
+
+            &__link {
+                text-decoration: none;
+                color:rgba(27, 28, 33, 1);
+                transition-duration: 0.3s;
+
+                &:not(.language--active):hover {
+                    color: var(--color-pink);
+                }
+            }
+
+            &--active {
+                color: var(--color-gray-alt);
+            }
+        }
+    }
+
+    @media (min-width: 1366px) {
+        display: block;
+        box-shadow: none;
+        width: 320px;
+    }
+}

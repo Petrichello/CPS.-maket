@@ -1,0 +1,96 @@
+.table {
+
+    padding-left: 24px;
+
+    .theading {
+        width: 95vw;
+
+        tr {
+            th {
+                text-align: left;
+                padding-left: 16px;
+                padding-top: 23px;
+                padding-bottom: 23px;
+            }
+        }
+    }
+
+    .tbody {
+        height: 324px;
+        width: 100vw;
+        background-color: var(--color-light);
+    }
+
+    &__td {
+        padding-left: 16px;
+        vertical-align: middle;
+    }
+
+    &__services {
+        width: 65vw;
+    }
+
+    &__price {
+        width: 14vw;
+    }
+
+    &__time {
+        width: 16vw;
+    }
+
+    &__button {
+        display: flex;
+        gap: 17px;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        grid-area: button;
+        background-color: var(--color-pink);
+    
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 24px;
+        letter-spacing: -0.15px;
+        text-transform: uppercase;
+        color: var(--color-light);
+    
+        width: 119px;
+        height: 32px;
+        padding-inline: 12px;
+        box-sizing: border-box;
+        border-radius: 16px;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 16px;
+
+        &::after {
+            content: url("../images/arrowWhite.svg");
+        }
+    }
+
+    &__tr {
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 40px;
+            margin-top: 16px;
+            width: 90%;
+            height: 1px;
+            background-color: var(--color-gray-border);
+
+            @media (min-width: 1120px) {
+                width: 93%;
+            }
+
+            @media (min-width: 1400px) {
+                width: 94%;
+            }
+        }
+    }
+
+    @media (min-width: 1366px) {
+        width: calc(100vw - 320px);
+    }
+}

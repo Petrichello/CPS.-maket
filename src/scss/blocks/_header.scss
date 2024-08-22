@@ -1,0 +1,98 @@
+.header {
+	@media (min-width: 1366px) {
+		display: none;
+	}
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--color-light);
+	height: 88px;
+	padding: 0 16px;
+
+	&__leftSide {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+
+		&::after {
+			content: url('../img/divider.svg');
+			height: 32px;
+
+			@media (min-width: 768px) {
+				display: none;
+			}
+		}
+
+		@media (min-width: 768px) {
+			&::before {
+				content:url('../img/divider.svg');
+				height: 32px;
+			}
+		}
+	}
+
+	&__burger {
+		background-image: url('../img/burger.svg');
+		width: 40px;
+		height: 40px;
+		order: -1;
+	}
+
+	&__rightSide {
+		display: flex;
+		gap: 16px;
+
+		@media (min-width: 768px) {
+			&::before {
+				content:url('../img/divider.svg');
+				height: 32px;
+			}
+		}
+	}
+
+	&__repair {
+		background-image: url('../img/repair.svg');
+		width: 40px;
+		height: 40px;
+	}
+
+	&__checkstatus {
+		background-image: url('../img/checkstatus.svg');
+		width: 40px;
+		height: 40px;
+	}
+
+	&__call {
+		background-image: url('../img/call.svg');
+		width: 40px;
+		height: 40px;
+		order: -1;
+
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__chat {
+		background-image: url('../img/chat.svg');
+		width: 40px;
+		height: 40px;
+		order: -1;
+
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__profile {
+		background-image: url('../img/profile.svg');
+		width: 40px;
+		height: 40px;
+		order: -1;
+
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+}

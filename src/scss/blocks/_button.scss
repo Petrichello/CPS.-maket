@@ -1,0 +1,9 @@
+.button {
+    @include reset-button;
+
+    transition-duration: 0.4s;
+
+    @include hover {
+        scale: 1.2;
+    }
+}

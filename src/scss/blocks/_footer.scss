@@ -1,0 +1,40 @@
+.footer {
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    color: var(--color-gray-alt);
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    box-shadow: 0 1px var(--color-accent-shadow) inset;
+
+    margin-top: 40px;
+    padding: 16px;
+
+    p {
+        margin: 0;
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 32px 24px;
+
+        a {
+            width: 240px;
+
+            &:nth-child(3) {
+                text-align: end;
+
+                @media (min-width: 1120px) {
+                    width: 330px;
+                }
+            }
+        }
+
+    }
+}
